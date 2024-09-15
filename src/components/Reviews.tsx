@@ -23,43 +23,46 @@ const ReviewSummary = () => {
   ];
 
   return (
-    <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-      <div className="flex items-center mb-5">
-        <p className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-semibold inline-flex items-center p-1.5 rounded">
-          8.7
-        </p>
-        <p className="ms-2 font-medium text-gray-900 dark:text-white">
-          Excellent
-        </p>
-        <span className="w-1 h-1 mx-2 bg-gray-900 rounded-full dark:bg-gray-500"></span>
-        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-          376 reviews
-        </p>
-        <a
-          href="#"
-          className="ms-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
-        >
-          Read all reviews
-        </a>
+    <>
+      <h2 className="mb-4 font-bold text-2xl">Reviews</h2>
+      <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <div className="flex items-center mb-5">
+          <p className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-semibold inline-flex items-center p-1.5 rounded">
+            8.7
+          </p>
+          <p className="ms-2 font-medium text-gray-900 dark:text-white">
+            Excellent
+          </p>
+          <span className="w-1 h-1 mx-2 bg-gray-900 rounded-full dark:bg-gray-500"></span>
+          <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+            376 reviews
+          </p>
+          <a
+            href="#"
+            className="ms-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
+          >
+            Read all reviews
+          </a>
+        </div>
+        <div className="gap-8 sm:grid sm:grid-cols-2">
+          {reviews.map((review, index) => (
+            <div key={index}>
+              <dl>
+                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                  {review.name}
+                </dt>
+                <dd className="flex items-center mb-3">
+                  <ReviewBar width={review.width} />
+                  <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                    {review.score}
+                  </span>
+                </dd>
+              </dl>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="gap-8 sm:grid sm:grid-cols-2">
-        {reviews.map((review, index) => (
-          <div key={index}>
-            <dl>
-              <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                {review.name}
-              </dt>
-              <dd className="flex items-center mb-3">
-                <ReviewBar width={review.width} />
-                <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                  {review.score}
-                </span>
-              </dd>
-            </dl>
-          </div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 
