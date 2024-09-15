@@ -1,9 +1,12 @@
+import ActiveTab from "./components/ActiveTab";
+
 function App() {
 
   return (
-    <>
-      <div className="text-red-400">hello</div>
-    </>
+
+      <div className="mx-[10%]">
+        <ActiveTab />
+      </div>
   );
 }
 
