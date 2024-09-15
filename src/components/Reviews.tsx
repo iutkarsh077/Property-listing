@@ -1,4 +1,5 @@
 const ReviewBar = ({ width }: { width: any }) => (
+
   <div className="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2 group">
     <div
       className="h-2.5 rounded transition-all duration-300 ease-in-out group-hover:scale-y-110 origin-left"

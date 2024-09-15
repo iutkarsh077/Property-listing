@@ -1,8 +1,9 @@
 import ReviewSummary from "../Reviews";
 import FAQsCard from "../FAQCard";
-import { IoBed } from "react-icons/io5";
-import { FaToilet } from "react-icons/fa6";
-import { PiBathtubBold } from "react-icons/pi";
+import bedSVG from "../../assets/bed.svg";
+import toiletSVG from "../../assets/toilet.svg";
+import bathtubSVG from "../../assets/bathtub.png";
+import ReviewCard from "../ReviewCard";
 
 const Overview = () => {
   return (
@@ -13,24 +14,24 @@ const Overview = () => {
         <ul className="flex my-6 flex-wrap gap-4 border-b-2 pb-5 border-solid">
           <li className="border-solid border p-4 rounded-lg bg-white space-y-2">
             <p>Bedroom 1</p>
-            <IoBed className="text-[24px]" />
+            <img src={bedSVG} alt="bed" className="h-10 w-10" />
             <p className="font-extralight">1 king bed</p>
           </li>
           <li className="border-solid border p-4 rounded-lg bg-white space-y-2">
             <p>Bedroom 2</p>
-            <IoBed className="text-[24px]" />
+            <img src={bedSVG} alt="bed" className="h-10 w-10" />
             <p className="font-extralight">1 king bed</p>
           </li>
           <li className="border-solid border p-4 rounded-lg bg-white space-y-2">
             <p>Bedroom 3</p>
-            <IoBed className="text-[24px]" />
+            <img src={bedSVG} alt="bed" className="h-10 w-10" />
             <p className="font-extralight">1 king bed</p>
           </li>
           <li className="border-solid border p-4 rounded-lg bg-white space-y-2">
             <p>Bedroom 4</p>
             <p className="flex space-x-3">
-              <IoBed className="text-[24px]" />
-              <IoBed className="text-[24px]" />
+              <img src={bedSVG} alt="bed" className="h-10 w-10" />
+              <img src={bedSVG} alt="bed" className="h-10 w-10" />
             </p>
             <p className="font-extralight">1 king bed</p>
           </li>
@@ -40,8 +41,8 @@ const Overview = () => {
           <li className="border-solid border p-4 rounded-lg bg-white space-y-2">
             <p>Bathroom 1</p>
             <div className="flex space-x-4">
-              <PiBathtubBold className="text-[24px]" />
-              <FaToilet className="text-[24px]" />
+              <img src={toiletSVG} alt="toilet" className="h-10 w-10" />
+              <img src={bathtubSVG} alt="bathtub" className="h-10 w-10" />
             </div>
             <p className="font-extralight text-[12px]">
               Bathtub or shower · Toilet
@@ -50,8 +51,8 @@ const Overview = () => {
           <li className="border-solid border p-4 rounded-lg bg-white space-y-2">
             <p>Bathroom 2</p>
             <div className="flex space-x-4">
-              <PiBathtubBold className="text-[24px]" />
-              <FaToilet className="text-[24px]" />
+              <img src={toiletSVG} alt="toilet" className="h-10 w-10" />
+              <img src={bathtubSVG} alt="bathtub" className="h-10 w-10" />
             </div>
             <p className="font-extralight text-[12px]">
               Bathtub or shower · Toilet
@@ -85,7 +86,7 @@ const Overview = () => {
           to experience
         </p>
       </div>
-      <div className="my-8">
+      <div className="my-8 bg-white rounded-lg p-8 shadow-lg">
         <h1 className="font-bold text-2xl ">FAQs</h1>
         <FAQsCard
           question="What's the check-in policy?"
@@ -106,6 +107,13 @@ const Overview = () => {
         <FAQsCard question="Is there parking?" answer="Parking is available" />
       </div>
       <ReviewSummary />
+      <div className="space-y-16 mt-12">
+      <ReviewCard />
+      <ReviewCard />
+      <ReviewCard />
+      <ReviewCard />
+
+      </div>
     </div>
   );
 };

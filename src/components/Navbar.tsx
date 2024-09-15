@@ -1,5 +1,6 @@
 import Switch from "./Switch";
 import { useEffect, useState } from "react";
+import logo from '../assets/propertyLogo.png'
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-gray-200 ml-16 mr-16 hover:scale-x-105 rounded-xl mt-6 border-gray-200 dark:bg-gray-900 transition-transform duration-700 ease-in-out ${
+      className={`shadow-xl bg-gray-200 ml-16 mr-16 hover:scale-x-105 rounded-xl mt-6 border-gray-200 dark:bg-gray-900 transition-transform duration-700 ease-in-out ${
         isVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
       }`}
     >
@@ -21,12 +22,12 @@ export default function Navbar() {
           className="flex items-center space-x-3 rtl:space-x-reverse transition-all duration-300 transform hover:scale-105"
         >
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8 transition-transform duration-300 transform hover:rotate-6"
-            alt="Flowbite Logo"
+            src={logo}
+            className="h-12 transition-transform duration-300 transform hover:rotate-6"
+            alt="property logo"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white transition-colors duration-300 hover:text-purple-600">
-            Flowbite
+            My Property
           </span>
         </a>
 
