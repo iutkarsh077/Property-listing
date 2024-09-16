@@ -15,9 +15,9 @@ const FAQsCard = ({ question, answer } : {question : string , answer : string}) 
         <div className="text-[18px] text-black font-medium">{question}</div>
         <div className="flex items-center">
           {isOpen ? (
-            <FiMinus className="text-[#98A2B3] text-[20px]" />
+            <FiMinus className="text-[20px]" />
           ) : (
-            <GoPlus className="text-[#98A2B3] text-[20px]" /> 
+            <GoPlus className="text-[20px]" /> 
           )}
         </div>
       </div>
